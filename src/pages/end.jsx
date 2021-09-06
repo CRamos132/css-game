@@ -27,7 +27,7 @@ export default function EndGame() {
   const { query, push } = useRouter()
   const { score } = query
   return (
-    <Body variant="laranja">
+    <Body variant="laranja" hidePadding={!finished}>
       {!finished && <Video video={`/videos/${score > 10 ? 'success' : 'fail'}.mp4`} onEnd={()=>{setFinished(true)}} />}
       {finished && (
         <>
