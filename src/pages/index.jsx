@@ -27,7 +27,7 @@ export default function Home() {
       <MenuNav>
         <Button
           onClick={() => {
-            push('/game')
+            push('/intro')
           }}
         >
           Jogar
