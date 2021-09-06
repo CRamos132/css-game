@@ -1,5 +1,5 @@
 import Body from '../components/atoms/Body'
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 import { useState } from 'react'
 import { useRouter } from 'next/dist/client/router'
 
@@ -8,7 +8,7 @@ export default function Video() {
   const { push } = useRouter()
   return (
     <Body>
-      <ReactPlayer
+      {/* <ReactPlayer
         url="/videos/success.mp4"
         controls={true}
         playing={play}
@@ -20,7 +20,7 @@ export default function Video() {
         onEnded={() => {
           push('/')
         }}
-      />
+      /> */}
     </Body>
   )
 }
