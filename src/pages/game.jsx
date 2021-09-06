@@ -42,11 +42,18 @@ const CardContainer = styled.div`
 
 export default function Home() {
   const [color, setColor] = useState('')
+  const [scoreColor, setScoreColor] = useState('')
   const [activeCard, setActiveCard] = useState(0)
   const [shuffledCards, setShuffledCards] = useState()
   const [time, subtract] = useTimer()
   const [score, setScore] = useState(0)
   const { push } = useRouter()
+  const ping = () => {
+    setScoreColor('green')
+    setTimeout(() => {
+        setScoreColor('')
+    }, 200)
+  }
   const onSwipe = (direction) => {
     const currentCard = cards[activeCard]
     if (!currentCard) {
@@ -62,6 +69,7 @@ export default function Home() {
     })
     if (direction === currentCard.answer) {
       setScore(oldState => oldState + 1)
+      ping()
       return
     }
     setColor('red')
@@ -99,7 +107,7 @@ export default function Home() {
       <Body>
         <Information>
           <Timer background={color} tempo={time} />
-          <Score>{score}</Score>
+          <Score background={scoreColor}>{score}</Score>
         </Information>
         <CardContainer>
           {shuffledCards && (

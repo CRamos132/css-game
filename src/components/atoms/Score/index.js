@@ -10,7 +10,9 @@ const Score = styled.div`
   min-width: 120px;
   text-align: center;
   font-family: 'Wallpoet';
-  background-color: #000000;
+  background-color: ${props =>
+    props.background ? props.background : '#000000'};
+    transition: 0.5s;
 `
 
 export default Score

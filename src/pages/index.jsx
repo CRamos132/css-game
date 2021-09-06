@@ -18,7 +18,7 @@ export default function Intro() {
         <Card>
           <CardTitle>História</CardTitle>
           <CardInformation>
-            O personagem se encontra em um quarto escuro, ansioso e com medo. O 
+            Matt se encontra em um quarto escuro, ansioso e com medo. O 
             estudante de programação foi preso neste quarto pois colou na sua 
             última prova de POO e a máfia da programação mundial o capturou. 
             Ele encontra uma página de papel com as instruções do jogo e então 
