@@ -1,43 +1,38 @@
 import { useRouter } from 'next/dist/client/router'
 import styled from 'styled-components'
 import Body from '../components/atoms/Body'
-
 import Button from '../components/atoms/Button'
+import CardTitle from '../components/atoms/CardTitle'
 import MenuNav from '../components/atoms/MenuNav'
+import Card from '../components/molecules/Card'
 
-const Logo = styled.img`
-  height: auto;
-  width: 200px;
-  margin: auto;
+const CardInformation = styled.article`
+  font-size: 1.2rem;
+  font-family: 'Quicksand';
 `
-
-const LogoWrapper = styled.div`
-  width: 100%;
-  text-align: center;
-  margin: 10vh auto 32px;
-`
-
-export default function Home() {
+export default function Intro() {
   const { push } = useRouter()
   return (
-    <Body>
-      <LogoWrapper>
-        <Logo src="/imgs/logo.png" alt="dinamite com texto escrito bomb" />
-      </LogoWrapper>
+    <Body variant="laranja">
       <MenuNav>
+        <Card>
+          <CardTitle>História</CardTitle>
+          <CardInformation>
+            O personagem se encontra em um quarto escuro, ansioso e com medo. O 
+            estudante de programação foi preso neste quarto pois colou na sua 
+            última prova de POO e a máfia da programação mundial o capturou. 
+            Ele encontra uma página de papel com as instruções do jogo e então 
+            se depara com a bomba. A salvação do mundo da programação (e da dele
+             mesmo) está em suas mãos.
+          </CardInformation>
+        </Card>
         <Button
+          variant="red"
           onClick={() => {
-            push('/intro')
+            push('/menu')
           }}
         >
-          Jogar
-        </Button>
-        <Button
-          onClick={() => {
-            push('/como-jogar')
-          }}
-        >
-          Como jogar
+          Entendi
         </Button>
       </MenuNav>
     </Body>

@@ -50,7 +50,7 @@ export default function EndGame() {
           <Button
             variant="red"
             onClick={() => {
-              push('/')
+              push('/menu')
             }}
           >
             Sair
