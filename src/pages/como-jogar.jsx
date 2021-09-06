@@ -18,10 +18,10 @@ export default function ComoJogar() {
         <Card>
           <CardTitle>Instruções</CardTitle>
           <CardInformation>
-            Você tem X segundos para desarmar a bomba com seu conhecimento em
+            Você tem 60 segundos para desarmar a bomba com seu conhecimento em
             CSS. Clique na opção &apos;position&apos; se você acha que o item é
             um position; Clique na opção &apos;display&apos; se você acha que o
-            item é um display; Clique na lixeira se você acha que o item não faz
+            item é um display; Clique em descartar se você acha que o item não faz
             parte de nenhum desses dois grupos.
           </CardInformation>
         </Card>
