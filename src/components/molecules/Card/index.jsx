@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import ArrowIcon from '../../atoms/ArrowIcon'
 import CardContent from '../../atoms/CardContent'
 import CardInformation from '../../atoms/CardInformation'
 import CardTitle from '../../atoms/CardTitle'
@@ -36,6 +37,7 @@ export default function Card({
           <>
             <CardTitle>{item.name}</CardTitle>
             {!hide && <CardInformation>{item.description}</CardInformation>}
+            <ArrowIcon isOpen={!hide} />
           </>
         )}
         {children}
