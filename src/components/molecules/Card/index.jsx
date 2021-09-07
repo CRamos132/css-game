@@ -21,12 +21,14 @@ const InnerCard = styled.div`
 export default function Card({
   item,
   children,
-  fixedHeight
+  fixedHeight,
+  cursor
 }) {
   const [hide, setHide] = useState(true)
 
   return (
     <CardContent
+      cursor={cursor}
       fixedHeight={fixedHeight}
       onClick={() => {
         setHide(oldState => !oldState)

@@ -9,6 +9,7 @@ const CardContent = styled.button`
   max-width: 400px;
   height: ${props => (props.fixedHeight ? '300px' : '')};
   border-radius: 12px;
+  cursor: ${props => props.cursor || 'default'};
 `
 
 export default CardContent

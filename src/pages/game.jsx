@@ -111,7 +111,7 @@ export default function Home() {
         </Information>
         <CardContainer>
           {shuffledCards && (
-            <Card fixedHeight item={shuffledCards[activeCard]} />
+            <Card cursor='pointer' fixedHeight item={shuffledCards[activeCard]} />
           )}
         </CardContainer>
         <Controller>
