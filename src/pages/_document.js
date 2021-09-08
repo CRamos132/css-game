@@ -18,6 +18,8 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
+            <link rel="icon" href="/favicon.ico" />
+            <title>Bomb!</title>
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
