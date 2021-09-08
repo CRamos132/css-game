@@ -24,7 +24,7 @@ export default function Card({
   fixedHeight,
   cursor
 }) {
-  const [hide, setHide] = useState(true)
+  const [hide, setHide] = useState(false)
 
   return (
     <CardContent
